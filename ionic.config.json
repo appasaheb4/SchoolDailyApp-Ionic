@@ -1,0 +1,8 @@
+{
+  "name": "SchoolDaily",
+  "app_id": "4c5ac746",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

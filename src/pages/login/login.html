@@ -1,0 +1,29 @@
+<ion-content class="fullContent">
+    <br/>
+    <img src="assets/Images/Login/appIcon.png" alt="" class="img-responsive img-circle loginIcon" />
+    <h5 class="text-center">Select Your School</h5> 
+    <form [formGroup]="loginForm">
+        <ion-list>
+            <ion-item class="contentListItem">      
+                <ion-label color="dark">Select School</ion-label>
+                <ion-select formControlName="schoolName" [(ngModel)]="schoolName">    
+                    <ion-option>abc</ion-option>
+                    <ion-option>xyz</ion-option>
+                </ion-select>
+            </ion-item>          
+            <ion-item class="contentListItem">    
+                <ion-input type="text" placeholder="Enrollment Number" formControlName="enroll"  [(ngModel)]="enroll" ></ion-input>
+            </ion-item>  
+            <ion-item class="contentListItem">
+                <ion-input type="password" placeholder="Password" formControlName="password" [(ngModel)]="password"></ion-input>
+            </ion-item>
+            <ion-item no-lines class="contentListItem">    
+                <button ion-button color="appcolor" full (click)="login();">Login</button>      
+            </ion-item>
+            <ion-item no-lines class="contentListItem">
+                <button ion-button  color="appcolor" clear full>Forgot Password</button>
+            </ion-item>
+        </ion-list>
+    </form>
+
+</ion-content>      

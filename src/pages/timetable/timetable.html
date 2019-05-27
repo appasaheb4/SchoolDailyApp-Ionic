@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-navbar color="appcolor">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Time Table</ion-title>
+    </ion-navbar>    
+    <ion-navbar color="homelabelcolor" class="marginTopLine">
+        <ion-title class="text-center">Kumar Sir</ion-title>
+    </ion-navbar>       
+       
+    <ion-navbar color="redColor" class="marginTopLine" > 
+        <ion-scroll scrollX="true" style="width:100vw;height:40px" >  
+        <ion-segment  color="white"   [(ngModel)]="tabs">   
+            <ion-segment-button  (click)="selectTab(0)"
+                value="0"><span color="whiteColor">Time</span>
+            </ion-segment-button>
+            <ion-segment-button (click)="selectTab(1)"
+                value="1"><span id="swiptabTitle">Monday</span>
+            </ion-segment-button>
+             <ion-segment-button (click)="selectTab(2)"
+                value="2"><span id="swiptabTitle">Tuesday</span>
+            </ion-segment-button>
+             <ion-segment-button (click)="selectTab(3)"
+                value="3"><span id="swiptabTitle">Wednesday</span>
+            </ion-segment-button>
+             <ion-segment-button (click)="selectTab(4)"
+                value="4"><span id="swiptabTitle">Thursday</span>
+            </ion-segment-button>
+             <ion-segment-button (click)="selectTab(5)"
+                value="5"><span id="swiptabTitle">Friday</span>
+            </ion-segment-button>
+             <ion-segment-button (click)="selectTab(6)"
+                value="6"><span id="swiptabTitle">Saturday</span>
+            </ion-segment-button>
+             <div id="slide" class="slide"></div>   
+        </ion-segment>
+        </ion-scroll>
+    </ion-navbar>
+</ion-header>
+
+<ion-slides   class="fullContent" #pageSlider id="pageSlider"  (ionSlideWillChange)="changeWillSlide($event)" style="z-index: 0">
+    <ion-slide > 
+        Time
+    </ion-slide>
+    <ion-slide>
+        Monday
+    </ion-slide>
+    <ion-slide>
+        Tuesday
+    </ion-slide>
+    <ion-slide>
+        Wednesday
+    </ion-slide>
+    <ion-slide>
+        Thurday
+    </ion-slide>
+    <ion-slide>
+        Friday
+    </ion-slide>
+    <ion-slide>
+        Saturday
+    </ion-slide>
+</ion-slides>

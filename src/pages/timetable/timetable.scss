@@ -1,0 +1,59 @@
+page-timetable {
+    
+    
+    
+    
+$num-of-tabs: 7;
+
+ @mixin tabs {
+   @for $i from 1 through $num-of-tabs {
+     &:nth-of-type(#{$i}) {
+       &.segment-activated {
+         ~ .slide {
+           left: calc((100% / #{$num-of-tabs}) * #{$i - 1});
+         }
+       }
+     }
+   }
+ }
+ 
+    .fullContent{
+      background-color: #FFFFB3;
+    } 
+    
+    ion-segment {
+    display: block;
+    white-space: nowrap;
+    font-size: 0;
+    overflow: auto;
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        display: none;
+    }
+
+    ion-segment-button.segment-button {
+        display: inline-block;
+        min-width: 100px;
+        width: auto;
+        
+    }
+    }
+    
+    
+    
+   
+    .slide {
+        background: #ffffff;
+        width: calc(100% / #{$num-of-tabs});
+        height: 4px;
+        position: absolute;
+        left: 0;    
+        display: none;
+        top: calc(100% - 4px);
+        transition: left 0.3s ease-out;
+    }
+
+    
+    
+}

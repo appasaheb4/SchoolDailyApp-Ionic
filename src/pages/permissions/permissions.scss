@@ -1,0 +1,24 @@
+page-permissions {
+
+    .fullContent{
+      background-color: #FFFFB3;
+    } 
+    .panel{
+        width: 95%;
+        height: 100%;
+       display: block;
+    margin-left: auto;
+     margin-right: auto;
+    }
+    
+    .permitted{
+        color: #4CAF50;
+    }
+    .rejected{   
+        color: #ff0000;
+    }
+    .dateShow{
+        color: gray;
+        
+    }
+}

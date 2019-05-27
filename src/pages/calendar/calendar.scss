@@ -1,0 +1,66 @@
+page-calendar {
+    
+    $num-of-tabs: 3;
+
+ @mixin tabs {
+   @for $i from 1 through $num-of-tabs {
+     &:nth-of-type(#{$i}) {
+       &.segment-activated {
+         ~ .slide {
+           left: calc((100% / #{$num-of-tabs}) * #{$i - 1});
+         }
+       }
+     }
+   }
+ }
+    
+ .segment-button {
+   border: 0 !important;
+   @include tabs;
+ }
+
+ .slide {
+   background: dodgerblue;
+   width: calc(100% / #{$num-of-tabs});
+   height: 4px;
+   position: absolute;
+   left: 0;    
+   top: calc(100% - 4px);
+   transition: left 0.3s ease-out;
+ }
+ 
+ .swiper-slide {
+    overflow-y: scroll;
+    display: block;
+}
+ion-slide{
+    padding-top: 120px;  
+}
+
+
+    .fullContent{
+      background-color: #FFFFB3;
+    } 
+    
+    .panel{
+        border-bottom-color: red;
+    }
+    .vl {
+    border-left: 2px solid red;
+   } 
+   .v2 {
+    border-left: 2px solid black;
+   } 
+.panel{
+        width: 96%;
+       display: block;
+    margin-left: auto;
+     margin-right: auto;
+    }
+    
+    .panel-footer{
+         background-color: #BDB9B9;
+    }   
+    
+   
+}

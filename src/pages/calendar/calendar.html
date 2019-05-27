@@ -1,0 +1,141 @@
+<ion-header>
+    <ion-navbar color="appcolor">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Calendar</ion-title>
+    </ion-navbar>    
+    <ion-navbar color="homelabelcolor" class="marginTopLine">
+        <ion-title class="text-center">Kumar Sir</ion-title>
+    </ion-navbar> 
+      
+    <ion-navbar color="appcolor" class="marginTopLine">
+        <ion-segment color="white"  [(ngModel)]="tabs">   
+
+            <ion-segment-button (click)="selectTab(0)"
+                value="0">
+                <span id="swiptabTitle">IMPORTANT DATES</span>
+            </ion-segment-button>
+            <ion-segment-button (click)="selectTab(1)"
+                value="1"><span id="swiptabTitle">HOLIDAY</span>
+            </ion-segment-button>
+             
+            <ion-segment-button (click)="selectTab(2)"   
+                value="2"><span id="swiptabTitle">VACATION</span>
+            </ion-segment-button>
+            <div id="slide" class="slide"></div>    
+        </ion-segment>
+    </ion-navbar>
+    
+</ion-header>
+
+
+<ion-slides #pageSlider  class="fullContent" id="pageSlider"  (ionSlideWillChange)="changeWillSlide($event)">
+    <ion-slide > 
+        <br/><br/>
+        <ion-grid>
+        <ion-row>     
+            <ion-col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12>
+                <div class="panel" >
+                    <div class="panel-body">
+                        <ion-grid>
+                            <ion-row>     
+                                <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 >
+                                    <span>30th Dec 2017</span><br/><span>Saturday</span>
+                                </ion-col>    
+                                <ion-col col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 class="vl">
+                                  <span>We are having new year eve party at the school hall all are invited with family.</span>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </div>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    </ion-slide>
+     <ion-slide > 
+         <br/><br/>
+        <ion-grid style="background-color: #FFC107;">        
+            <ion-row>        
+                <ion-col col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6>
+                    <span class="center">Date</span>
+                </ion-col>
+                <ion-col col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 class="v2">
+                    <span class="center">Day</span>
+                </ion-col>
+               
+            </ion-row>
+        </ion-grid>
+              <ion-grid>
+        <ion-row>     
+            <ion-col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12>
+                <div class="panel" >
+                    <div class="panel-body">
+                        <ion-grid>
+                            <ion-row>     
+                                <ion-col col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 >
+                                    <span>31st Dec 2017</span>
+                                </ion-col>
+                                <ion-col col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 class="v2">
+                                    <span>Sunday</span>
+                                </ion-col>
+                               
+                            </ion-row>
+                        </ion-grid>
+                    </div>
+                    <div class="panel-footer">
+                        do it</div>
+                </div>
+            </ion-col>  
+        </ion-row>
+    </ion-grid>
+   
+    </ion-slide>   
+     <ion-slide > 
+         <br/><br/>
+        <ion-grid style="background-color: #FFC107;">        
+            <ion-row>        
+                <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4>
+                    <span class="center">From</span>
+                </ion-col>
+                <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 class="v2">
+                    <span class="center">To</span>
+                </ion-col>
+              <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 class="v2">
+                    <span class="center">Re-Opens</span>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+              <ion-grid>
+        <ion-row>     
+            <ion-col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12>
+                <div class="panel" >
+                    <div class="panel-body">
+                        <ion-grid>
+                            <ion-row>     
+                               <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4>
+                                    <span>31st Dec 2017</span>
+                                </ion-col>
+                                <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 class="v2">
+                                    <span>30th Dec 2017</span>
+                                </ion-col>
+                                <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 class="v2">
+                                    <span>31th Dec 2017</span>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </div>
+                    <div class="panel-footer">
+                        do it</div>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+         
+         
+    </ion-slide>
+</ion-slides>
+<ion-footer>
+  <button  ion-button full color="homelabelcolor">Dates May be Subject To Change</button>
+</ion-footer>
